@@ -77,7 +77,7 @@ const Dashboard = ({ onLogout }) => {
 
   const fetchProducts = async () => {
     try {
-      const res = await fetch("jewellery-backend-3.onrender.com");
+      const res = await fetch("https://jewellery-backend-3.onrender.com");
       if (res.ok) {
         const data = await res.json();
         setProducts(data);
@@ -90,7 +90,7 @@ const Dashboard = ({ onLogout }) => {
     setLoading(true);
 
     try {
-      const res = await fetch("jewellery-backend-3.onrender.com", {
+      const res = await fetch("https://jewellery-backend-3.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form)
